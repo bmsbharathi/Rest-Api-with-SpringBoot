@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: SpringBootAssignment
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: bharathi.b
+Implementation-Vendor-Id: com.intellect.assginment
+Build-Jdk: 1.8.0_144
+Implementation-URL: http://projects.spring.io/spring-boot/SpringBootAs
+ signment/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+

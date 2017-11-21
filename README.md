@@ -2,7 +2,7 @@
 
 Perform Create, Delete, Update operations on a resource called user using Rest Apis. Do basic validations
 
-## The Structure of Resource user is
+### The Structure of Resource user is
 
 1.	id	string	Unique id, to be generated in Create operation 
 2.	fName	string	First Name 

@@ -2,6 +2,8 @@ package com.intellect.assignment.domain;
 
 import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 public class User {
 
 	private String id;
@@ -14,6 +16,7 @@ public class User {
 
 	private long pinCode;
 
+	@JsonFormat(pattern = "dd/MMM/yyyy")
 	private Date birthDate;
 
 	private boolean isActive;
@@ -22,8 +25,7 @@ public class User {
 		super();
 	}
 
-	public User(String id, String fName, String lName, String email, long pinCode, Date birthString,
-			boolean isActive) {
+	public User(String id, String fName, String lName, String email, long pinCode, Date birthString, boolean isActive) {
 		super();
 		this.id = id;
 		this.fName = fName;

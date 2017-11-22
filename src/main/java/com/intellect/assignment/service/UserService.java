@@ -24,7 +24,6 @@ public class UserService {
 
 	@Autowired
 	private UserValidator userValidator;
-
 	private static List<User> userList = new ArrayList<>();
 	private static ObjectMapper mapper = new ObjectMapper();
 	private static final Logger logger = Logger.getLogger(UserService.class);
@@ -76,7 +75,7 @@ public class UserService {
 			if (user.getEmail().equals(u.getEmail()) && u.getIsActive()) {
 
 				ValidationErrors error = new ValidationErrors();
-				resp.setResMsg("User already exists");
+				resp.setResMsg("User with "+user.getEmail()+" already exists");
 				resp.setUserId(user.getId());
 				error.setCode("-1");
 				error.setField(user.getEmail());
@@ -118,7 +117,7 @@ public class UserService {
 				return new ResponseEntity<Response>(resp, HttpStatus.OK);
 			}
 		}
-		resp.setResMsg("Could not delete User:" + id);
+		resp.setResMsg("Could not delete, User with Id: " + id+" Not found!");
 		resp.setUserId(id);
 
 		return new ResponseEntity<Response>(resp, HttpStatus.BAD_REQUEST);

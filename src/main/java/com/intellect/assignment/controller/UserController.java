@@ -40,7 +40,7 @@ public class UserController {
 		if (resp == null) {
 
 			resp = new Response();
-			resp.setResMsg("User not found. ");
+			resp.setResMsg("User not found.");
 			resp.setUserId(String.valueOf(id));
 
 			return new ResponseEntity<Response>(resp, HttpStatus.BAD_REQUEST);
@@ -52,7 +52,7 @@ public class UserController {
 	@PostMapping(value = "/create", consumes = "application/json")
 	public ResponseEntity<Response> createUser(@RequestBody User user) {
 
-		logger.info("Inside createUser() ");
+		logger.info("Inside createUser() - Controller");
 		Response resp = userService.createUser(user);
 		logger.info("Response from Service" + resp);
 

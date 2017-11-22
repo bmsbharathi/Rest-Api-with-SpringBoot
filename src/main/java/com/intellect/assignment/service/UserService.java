@@ -62,7 +62,7 @@ public class UserService {
 		}
 		for (User u : userList) {
 
-			if (user.getEmail().equals(u.getEmail()) && !u.isActive()) {
+			if (user.getEmail().equals(u.getEmail()) && !u.getIsActive()) {
 
 				logger.info("" + u.getEmail() + "      " + user.getEmail());
 				resp.setResMsg("User Successfully created");
@@ -73,7 +73,7 @@ public class UserService {
 
 				return resp;
 			}
-			if (user.getEmail().equals(u.getEmail()) && u.isActive()) {
+			if (user.getEmail().equals(u.getEmail()) && u.getIsActive()) {
 
 				ValidationErrors error = new ValidationErrors();
 				resp.setResMsg("User already exists");
@@ -111,7 +111,7 @@ public class UserService {
 
 			if (u.getId().equals(id)) {
 
-				u.setActive(false);
+				u.setIsActive(false);
 				resp.setResMsg("Successfully Deactivated");
 				resp.setUserId(id);
 

@@ -26,12 +26,13 @@ public class TestController {
 	private static final Logger logger = Logger.getLogger(TestController.class);
 
 	@SuppressWarnings("deprecation")
-	@Test
-	@Ignore
+	@Test /*
+			 * @Ignore
+			 */
 	public void testCreateUser() throws JsonProcessingException {
 
 		User user = new User();
-		user.setActive(true);
+		user.setIsActive(true);
 		user.setEmail("bmsbharathi@gmail.com");
 		user.setlName("Rahul");
 		user.setfName("Ganesh");

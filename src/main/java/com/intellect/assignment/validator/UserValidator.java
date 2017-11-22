@@ -14,7 +14,7 @@ import com.intellect.assignment.domain.ValidationErrors;
 @Service
 public class UserValidator {
 
-	private List<ValidationErrors> valErrors = null;
+	private List<ValidationErrors> valErrors = new ArrayList<>();
 	private String EMAIL_PATTERN = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
 			+ "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
 	private static final Logger logger = Logger.getLogger(UserValidator.class);
@@ -22,7 +22,6 @@ public class UserValidator {
 	public List<ValidationErrors> validateUser(User user) {
 
 		logger.info("Inside validateUser() - Validator");
-		valErrors = new ArrayList<>();
 
 		if (user.getEmail() == null || !Pattern.matches(EMAIL_PATTERN, user.getEmail())) {
 
@@ -58,7 +57,7 @@ public class UserValidator {
 
 		}
 		if (user.getBirthDate().after(new Date())) {
-			
+
 			logger.warn(user.getBirthDate() + "  " + new Date());
 			ValidationErrors error1 = new ValidationErrors();
 			error1.setCode(String.valueOf(0));

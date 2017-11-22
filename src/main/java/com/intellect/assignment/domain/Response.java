@@ -10,7 +10,7 @@ public class Response {
 
 	private String userId;
 
-	List<ValidationErrors> valErrors;
+	private List<ValidationErrors> valErrors;
 
 	public String getResMsg() {
 		return resMsg;

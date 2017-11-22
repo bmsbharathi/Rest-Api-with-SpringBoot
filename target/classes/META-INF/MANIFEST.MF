@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Implementation-Title: SpringBootAssignment
 Implementation-Version: 0.0.1-SNAPSHOT
-Built-By: bharathi.b
+Built-By: bmsbharathi
 Implementation-Vendor-Id: com.intellect.assginment
-Build-Jdk: 1.8.0_144
+Build-Jdk: 1.8.0_151
 Implementation-URL: http://projects.spring.io/spring-boot/SpringBootAs
  signment/
 Created-By: Maven Integration for Eclipse

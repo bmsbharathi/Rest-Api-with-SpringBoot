@@ -57,10 +57,14 @@ public class UserController {
 		logger.info("Response from Service" + resp);
 
 		if (resp.getValErrors().isEmpty()) {
+
 			logger.info("No errors");
 			return new ResponseEntity<Response>(resp, HttpStatus.OK);
-		} else
-			return new ResponseEntity<Response>(resp, HttpStatus.BAD_REQUEST);
+		}
+
+		logger.info("has errors");
+		return new ResponseEntity<Response>(resp, HttpStatus.BAD_REQUEST);
+
 	}
 
 	@GetMapping(value = "/")

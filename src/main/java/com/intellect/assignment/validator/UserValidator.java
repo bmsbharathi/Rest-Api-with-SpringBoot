@@ -39,7 +39,7 @@ public class UserValidator {
 			error.setMessage("Enter your fName");
 			valErrors.add(error);
 		}
-		if (user.getlName() == null || user.getfName().trim().length() == 0) {
+		if (user.getlName() == null || user.getlName().trim().length() == 0) {
 
 			ValidationErrors error = new ValidationErrors();
 			error.setCode(String.valueOf(0));
